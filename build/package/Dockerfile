@@ -13,7 +13,7 @@ RUN go mod tidy
 
 WORKDIR /go/src/github.com/mkm29/godo/cmd/tutorial
 
-RUN GOOS=linux go build -a -installsuffix cgo -o app .
+RUN GOOS=linux go build -a -installsuffix cgo -o app cmd/godo/main.go
 
 
 #Second stage for a smaller image

@@ -47,7 +47,7 @@ func Initialize() *chi.Mux {
 func ServeRouter() {
 	r := Initialize()
 	// Start the server on localhost port 8080
-	err := http.ListenAndServe(":8080", r)
+	err := http.ListenAndServe(":8090", r)
 	if err != nil {
 		log.Fatal(err)
 	}

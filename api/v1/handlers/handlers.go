@@ -48,7 +48,8 @@ func CreateItem(rw http.ResponseWriter, r *http.Request) {
 
 	// save item
 
-	// return JSON status
+	// if no error, return JSON status
+	rw.Write([]byte(`{"status": "ok"}`))
 }
 
 // DeleteItem implements a simple handler to use the RW and Request object
@@ -56,4 +57,7 @@ func DeleteItem(rw http.ResponseWriter, r *http.Request) {
 	// get item from db
 
 	// delete item
+
+	// if no error, return JSON status
+	rw.Write([]byte(`{"status": "ok"}`))
 }
