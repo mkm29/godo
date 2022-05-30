@@ -19,8 +19,8 @@ func Initialize() *chi.Mux {
 	router.Use(
 		render.SetContentType(render.ContentTypeJSON),
 		middleware.RedirectSlashes,
-		middleware.Recoverer,            //middleware to recover from panics
-		middleware.Heartbeat("/health"), //for heartbeat process such as Kubernetes liveprobeness
+		middleware.Recoverer,             //middleware to recover from panics
+		middleware.Heartbeat("/healthz"), //for heartbeat process such as Kubernetes liveprobeness
 		cors.Handler(cors.Options{
 			// AllowedOrigins:   []string{"https://foo.com"}, // Use this to allow specific origin hosts
 			AllowedOrigins: []string{"https://*", "http://*"},
