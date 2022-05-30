@@ -11,7 +11,7 @@ ENV TZ America/New_York
 #dependencies
 RUN go mod tidy 
 
-WORKDIR /go/src/github.com/mkm29/godo/cmd/tutorial
+WORKDIR /go/src/github.com/mkm29/godo/cmd/godo
 
 RUN GOOS=linux go build -a -installsuffix cgo -o app cmd/godo/main.go
 
